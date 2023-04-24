@@ -1,7 +1,7 @@
 # ATM APP
 
 This project was setup with [Create React App](https://github.com/facebook/create-react-app).
-![image](https://user-images.githubusercontent.com/117302789/225685371-249b0940-54c8-4206-ae8c-e7ed8a91e323.png)
+
 
 ## Project description
 The purpose of this application is to demostrate de use of different react tools.
