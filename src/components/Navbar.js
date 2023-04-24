@@ -1,34 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom/cjs/react-router-dom.min'
 
 const Navbar = () => {
+
+    const navigation = [
+        {name: 'BadBank', href: '/badbank'},
+        {name: 'Create Account', href: '/CreateAccount/'},
+        {name: 'Login', href: '/login/'},
+        {name: 'Deposit', href: '/deposit'},
+        {name: 'Withdraw', href: '/withdraw'},
+        {name: 'Balance', href: '/balance'},
+        {name: 'AllData', href: '/alldata'},
+    ]
+    
   return (
     
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary bg-primary">
         <div className="container-fluid">
-            <a className="navbar-brand" href='/'>BadBank</a>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-            </button>
+            
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
-                    <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href='/CreateAccount/'>Create Account</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href='/login/'>Login</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href='/deposit/'>Deposit</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href='/withdraw/'>Withdraw</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href='/balance/'>Balance</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href='/alldata/'>AllData</a>
-                    </li>
+
+                    {navigation.map((item, index) =>{
+                        return (
+                            <li className="nav-item">
+                                <NavLink className={({isActive})=>{
+                                    console.log(item.href + ' ' + isActive);
+                                    return (
+                                        'nav-link ' + (isActive ? 'active' : null)
+                                    )
+                                }} aria-current="page" to={item.href} data-bs-toggle="tooltip" data-bs-placement="top" title={`Go to ${item.name} Page`} key={index} style={{fontWeight: 'bold'}}>{item.name}</NavLink>
+                            </li>
+                        )
+                    })}
+                    
                 </ul>
                 <form className="d-flex" role="search">
                     <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>

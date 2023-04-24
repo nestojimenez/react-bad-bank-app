@@ -9,8 +9,8 @@ const Home = () => {
         bgcolor="primary"
         txtcolor="black" 
         header="BadBlan Landing Page" 
-        title="Welcome to the bank" 
-        text="You can use this bank" 
+        title="Welcome to Bad Bank" 
+        text="You can use this bank, please login in order to use our BadBank" 
         body={(<img src={imgBank} className='img-fluid' alt='Resposive image'/>)}
     />
   )

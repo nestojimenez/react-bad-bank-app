@@ -1,6 +1,20 @@
-# Getting Started with Create React App
+# ATM APP
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was setup with [Create React App](https://github.com/facebook/create-react-app).
+![image](https://user-images.githubusercontent.com/117302789/225685371-249b0940-54c8-4206-ae8c-e7ed8a91e323.png)
+
+## Project description
+The purpose of this application is to demostrate de use of different react tools.
+
+useHistory hook is use to navigate and to move from intro page to a home page where the user will be ask to go to login or create user, on create login the user will be able to log in if proper name and password are enter, if login is successful a loged user will be store, to handle the loged user I am using a customHook, in case user has not a current user and password he can crate one on Create Account, here user will enter name, email and password, all users are store on a variable users that use useState Hook and is pass thru all the components on the application using UserContext. 
+
+Deposit.- Here the user can make a deposit, deposits needs to be a positive number, all deposits will be added to the user balance, balance is shown on the deposit card.
+
+Withdraw.- Here user can make a withdraw, this field needs to be a positive number and not grater than curren balance, all withdraws will modify user balance.
+
+Balance.- Here you can look at your current Balancce.
+
+AllData.- Here you can track all users data.
 
 ## Available Scripts
 
@@ -14,57 +28,13 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+## Project Tools used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project was developed on React, here I demotrate the proper use of ReactRouter, setUse Hook, useHistory Hook.
+I also used bootstrap. I used React Components.
 
-### `npm run build`
+## Next steps
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+I will include the use of Formik.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
